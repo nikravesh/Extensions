@@ -62,8 +62,7 @@ public static class SwaggerExtentions
             app.UseSwagger();
             app.UseSwaggerUI(delegate (SwaggerUIOptions c)
             {
-                c.SwaggerEndpoint(swaggerOption.SwaggerDoc.URL, swaggerOption.SwaggerDoc.Title);
-                c.RoutePrefix = string.Empty;
+                c.SwaggerEndpoint(swaggerOption.SwaggerDoc.URL, swaggerOption.SwaggerDoc.Title);                
                 c.OAuthUsePkce();
             });
         }
