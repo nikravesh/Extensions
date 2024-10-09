@@ -1,14 +1,12 @@
-﻿namespace ExtensionMethod.Endpoints.Extensions;
+﻿using ExtensionMethod.Endpoints.Extensions.Swagger.Extentions;
+
+namespace ExtensionMethod.Endpoints.Extensions;
 
 public static class ConfigurationExtensions
 {
     public static WebApplication AddConfigurations(this WebApplication builder)
     {
-        if (builder.Environment.IsDevelopment())
-        {
-            builder.UseSwagger();
-            builder.UseSwaggerUI();
-        }
+        builder.UseSwaggerUI("Swagger");
 
         builder.UseHttpsRedirection();
 
