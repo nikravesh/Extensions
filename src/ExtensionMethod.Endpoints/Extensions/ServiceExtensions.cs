@@ -1,14 +1,12 @@
-﻿using ExtensionMethod.Endpoints.Extensions.Swagger.Extentions;
-
-namespace ExtensionMethod.Endpoints.Extensions;
+﻿namespace ExtensionMethod.Endpoints.Extensions;
 
 public static class ServiceExtensions
 {
-    public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddControllers();
         services.AddEndpointsApiExplorer();
-        services.AddSwagger(configuration, "Swagger");
+        services.AddSwaggerGen();
 
         return services;
     }
